@@ -31,6 +31,38 @@ body {
   min-height: 100vh;
 }
 
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 80vw;
+  width: 100%;
+}
+
+.activar{
+  box-shadow: 0 0 20px red;
+}
+
+.activar:hover{
+  border-color: green;
+}
+
+.desactivar:hover{
+  border-color: red;
+}
+
+.desactivar{
+  box-shadow: 0 0 20px green;
+}
+
+.card{
+  border: 1px solid;
+  width: 280px;
+  box-shadow: 10px 10px 10px #ffffff32;
+  border-radius: 11px;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -46,13 +78,6 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {

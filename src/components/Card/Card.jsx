@@ -26,11 +26,17 @@ export default function Card({sens, setData, data}) {
             <h2>{sens.name}</h2>
             <h3>{sens.desc}</h3>
             <p>Estado: {sens.state} - PIN: {sens.pin}</p>
-            {
-                sens.state==0 ?
-                <button className='activar' onClick={() => activateHandler({sens,state:1})}>Activar</button>
-                :
-                <button className='desactivar' onClick={() => activateHandler({sens,state:0})}>Desactivar</button>
+            {sens.state > 1 ?
+                <></>
+            :
+                <>
+                    {
+                        sens.state==0 ?
+                        <button className='activar' onClick={() => activateHandler({sens,state:1})}>Activar</button>
+                        :
+                        <button className='desactivar' onClick={() => activateHandler({sens,state:0})}>Desactivar</button>
+                    }
+                </>
             }
         </div>
     )
